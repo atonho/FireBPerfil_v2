@@ -16,7 +16,9 @@ const routes: Routes = [
   { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilPageModule',canActivate: [AuthGuardService] },
   { path: 'cadastro-usuario', loadChildren: './cadastro-usuario/cadastro-usuario.module#CadastroUsuarioPageModule' },
   { path: 'logoff', loadChildren: './logoff/logoff.module#LogoffPageModule',canActivate: [AuthGuardService] },
-  { path: 'recuperar-senha', loadChildren: './recuperar-senha/recuperar-senha.module#RecuperarSenhaPageModule' }
+  { path: 'recuperar-senha', loadChildren: './recuperar-senha/recuperar-senha.module#RecuperarSenhaPageModule' },  { path: 'contato', loadChildren: './contato/contato.module#ContatoPageModule' },
+  { path: 'contato-detalhes', loadChildren: './contato-detalhes/contato-detalhes.module#ContatoDetalhesPageModule' }
+
 ];
 
 @NgModule({

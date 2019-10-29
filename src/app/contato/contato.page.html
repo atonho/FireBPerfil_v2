@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Realize o seu Contato</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form [formGroup]="formGroup"> <!-- vínculo com a variável formGroup  -->
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <!-- formControlName -> Atributo do formgroup -->
+      <ion-input formControlName="nome" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Telefone</ion-label>
+        <ion-input formControlName="telefone" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>E=mail</ion-label>
+        <ion-input formControlName="email" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Assunto</ion-label>
+      <ion-input formControlName="assunto" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Mensagem</ion-label>
+    <ion-input formControlName="mensagem" type="text"></ion-input>
+</ion-item>
+</ion-list>
+<ion-button expand="full" (click)="cadastrar()">Enviar Formulário de contato</ion-button>
+</form>
+</ion-content>

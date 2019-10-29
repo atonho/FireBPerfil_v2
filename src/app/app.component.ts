@@ -22,6 +22,11 @@ export class AppComponent {
       icon: 'home'
     },
     {
+      title: 'Contato',
+      url: '/contato',
+      icon: 'home'
+    },
+    {
       title: 'Logoff',
       url: '/logoff',
       icon: 'home'

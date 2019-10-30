@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>  Gastos Efetuados </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form [formGroup]="formGroup">
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Motivo :</ion-label>
+      <ion-input formControlName="motivo" value="{{gasto.motivo}}" type="text">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Data :</ion-label>
+        <ion-input formControlName="data"  value="{{gasto.data}}" type="text">
+           </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Meios utilizados :</ion-label>
+        <ion-input formControlName="meios"  value="{{gasto.meios}}" type="text">
+          </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Valor : </ion-label>
+      <ion-input formControlName="valor"  value="{{gasto.valor}}" type="text">
+        </ion-input>
+  </ion-item>
+  </ion-list>
+<ion-button expand="full" (click)="atualizar()">Atualizar</ion-button>
+<ion-button color="danger" expand="full" (click)="confirm()">Excluir</ion-button>
+</form>
+</ion-content>
+

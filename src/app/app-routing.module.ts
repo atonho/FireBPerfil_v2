@@ -17,7 +17,14 @@ const routes: Routes = [
   { path: 'cadastro-usuario', loadChildren: './cadastro-usuario/cadastro-usuario.module#CadastroUsuarioPageModule' },
   { path: 'logoff', loadChildren: './logoff/logoff.module#LogoffPageModule',canActivate: [AuthGuardService] },
   { path: 'recuperar-senha', loadChildren: './recuperar-senha/recuperar-senha.module#RecuperarSenhaPageModule' },  { path: 'contato', loadChildren: './contato/contato.module#ContatoPageModule' },
-  { path: 'contato-detalhes', loadChildren: './contato-detalhes/contato-detalhes.module#ContatoDetalhesPageModule' }
+  { path: 'contato-detalhes', loadChildren: './contato-detalhes/contato-detalhes.module#ContatoDetalhesPageModule' },
+  { path: 'lista', loadChildren: './lista/lista.module#ListaPageModule' },
+  { path: 'orcamento-cadastro', loadChildren: './orcamento-cadastro/orcamento-cadastro.module#OrcamentoCadastroPageModule' },
+  { path: 'orcamento-detalhes', loadChildren: './orcamento-detalhes/orcamento-detalhes.module#OrcamentoDetalhesPageModule' },
+  { path: 'orcamento-lista', loadChildren: './orcamento-lista/orcamento-lista.module#OrcamentoListaPageModule' },
+  { path: 'gasto-cadastro', loadChildren: './gasto-cadastro/gasto-cadastro.module#GastoCadastroPageModule' },
+  { path: 'gasto-detalhes', loadChildren: './gasto-detalhes/gasto-detalhes.module#GastoDetalhesPageModule' },
+  { path: 'gasto-lista', loadChildren: './gasto-lista/gasto-lista.module#GastoListaPageModule' }
 
 ];
 

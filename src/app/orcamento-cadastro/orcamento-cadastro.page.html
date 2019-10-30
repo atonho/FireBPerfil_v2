@@ -3,7 +3,7 @@
       <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
       </ion-buttons>
-      <ion-title>Faça seu Contato</ion-title>
+      <ion-title>Faça seu Orçamento</ion-title>
     </ion-toolbar>
 </ion-header>
 
@@ -16,22 +16,22 @@
       <ion-input formControlName="nome" type="text"></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label floating>Telefone</ion-label>
-        <ion-input formControlName="telefone" type="text"></ion-input>
+        <ion-label floating>Data</ion-label>
+        <ion-input formControlName="data" type="text"></ion-input>
     </ion-item>
     <ion-item>
         <ion-label floating>E=mail</ion-label>
         <ion-input formControlName="email" type="text"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>Assunto</ion-label>
-      <ion-input formControlName="assunto" type="text"></ion-input>
+      <ion-label floating>Adicione informação</ion-label>
+      <ion-input formControlName="addinfo" type="text"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Mensagem</ion-label>
-    <ion-input formControlName="mensagem" type="text"></ion-input>
+    <ion-label floating>Urgência</ion-label>
+    <ion-input formControlName="urgencia" type="text"></ion-input>
 </ion-item>
 </ion-list>
-<ion-button expand="full" (click)="cadastrar()">Enviar Formulário de contato</ion-button>
+<ion-button expand="full" (click)="cadastrar()">Enviar Solicitação</ion-button>
 </form>
 </ion-content>

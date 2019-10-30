@@ -19,17 +19,44 @@ export class AppComponent {
     {
       title: 'Perfil',
       url: '/perfil',
-      icon: 'home'
+      icon: 'person'
     },
     {
       title: 'Contato',
       url: '/contato',
-      icon: 'home'
+      icon: 'contacts'
     },
+    {
+      title: 'Lista de Contatos',
+      url: '/lista',
+      icon: 'List'
+    },
+    {
+      title: 'Orçamentos',
+      url: '/orcamento-cadastro',
+      icon: 'contacts'
+    },
+    {
+      title: 'Lista de Orçamentos',
+      url: '/orcamento-lista',
+      icon: 'contacts'
+    },
+    
+    {
+      title: 'Gastos',
+      url: '/gasto-cadastro',
+      icon: 'contacts'
+    },
+    {
+      title: 'Lista de Gastos',
+      url: '/gasto-lista',
+      icon: 'contacts'
+    },
+
     {
       title: 'Logoff',
       url: '/logoff',
-      icon: 'home'
+      icon: 'log-out'
     }
   ];
 

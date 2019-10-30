@@ -6,7 +6,7 @@ export class Contato{
     assunto : string;
     mensagem : string;
     
-    setCliente(obj : any, id : any){
+    setContato(obj : any, id : any){
         this.id = id;
         this.nome = obj.nome;
         this.email = obj.email;

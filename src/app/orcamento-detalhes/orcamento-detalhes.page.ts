@@ -1,19 +1,20 @@
-import { Contato } from './../../model/contato';
+import { Orcamento } from './../../model/orcamento';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { AlertController, ToastController } from '@ionic/angular';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { ToastController, AlertController } from '@ionic/angular';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-contato-detalhes',
-  templateUrl: './contato-detalhes.page.html',
-  styleUrls: ['./contato-detalhes.page.scss'],
+  selector: 'app-orcamento-detalhes',
+  templateUrl: './orcamento-detalhes.page.html',
+  styleUrls: ['./orcamento-detalhes.page.scss'],
 })
-export class ContatoDetalhesPage implements OnInit {
+export class OrcamentoDetalhesPage implements OnInit {
+
   id : string; // armazena o id para consulta
   formGroup : FormGroup; // dados do formulário
-  contato : Contato = new Contato(); // armazena o cliente da consulta
+  orcamento : Orcamento = new Orcamento(); // armazena o cliente da consulta
 
   constructor(private actRoute : ActivatedRoute, // capturar o ID
     private formB : FormBuilder, // Inicializar o formulário
@@ -28,32 +29,32 @@ export class ContatoDetalhesPage implements OnInit {
     // Inicializando o formulário
     this.formGroup = this.formB.group({
       nome : [],
-      telefone : [],
+      data : [],
       email : [],
-      assunto : [],
-      mensagem : [],
+      addinfo : [],
+      urgencia : [],
     })
   }
 
   ngOnInit() {
     // Carregar os dados do Contato selecionado
-    this.db.collection("contatos") // Seleciona a coleção Contato
+    this.db.collection("orcamentos") // Seleciona a coleção Contato
     .doc(this.id).get().subscribe(response=>{ // .doc seleciona o Contato com base no id
 
       // Atribuindo os dados do response para a variável Contato
-      this.contato.id = this.id; 
-      this.contato.nome = response.data().nome;
-      this.contato.email = response.data().email;
-      this.contato.telefone = response.data().telefone;
-      this.contato.assunto = response.data().assunto;
-      this.contato.mensagem = response.data().mensagem;
+      this.orcamento.id = this.id; 
+      this.orcamento.nome = response.data().nome;
+      this.orcamento.email = response.data().email;
+      this.orcamento.data = response.data().data;
+      this.orcamento.addinfo = response.data().addinfo;
+      this.orcamento.urgencia = response.data().urgencia;
     })
   }
 
   atualizar(){
     // Atualiza dos dados do cliente
-    this.db.collection('contatos') // seleciona a coleção cliente
-      .doc(this.contato.id) // Seleciona pelo ID do cliente
+    this.db.collection('orcamentos') // seleciona a coleção cliente
+      .doc(this.orcamento.id) // Seleciona pelo ID do cliente
         .set(this.formGroup.value) // Envia o formGroup com os dados selecionados
           .then(() =>{
             this.presentToast(); // Dados atualizados
@@ -63,17 +64,17 @@ export class ContatoDetalhesPage implements OnInit {
   }
 
   excluir(){
-    this.db.collection('contatos') // seleciona a coleção cliente
-      .doc(this.contato.id) // Seleciona pelo ID do cliente
+    this.db.collection('orcamentos') // seleciona a coleção cliente
+      .doc(this.orcamento.id) // Seleciona pelo ID do cliente
         .delete().then(()=>{ // Executa a exclusão
 
-      this.router.navigate(['lista']); // redireciona para home
+      this.router.navigate(['orcamento-cadastro']); // redireciona para home
     })
   }
 
   async presentToast() {
     const toast = await this.toastCtrl.create({
-      message: ' Contato atualizado com sucesso',
+      message: ' Orcamento atualizado com sucesso',
       duration: 2000
     });
     toast.present();

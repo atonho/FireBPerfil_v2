@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Controle de Gastos</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form [formGroup]="formGroup"> <!-- vínculo com a variável formGroup  -->
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Motivo :</ion-label>
+      <!-- formControlName -> Atributo do formgroup -->
+      <ion-input formControlName="motivo" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Data : </ion-label>
+        <ion-input formControlName="data" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Meios de Utilizado : </ion-label>
+        <ion-input formControlName="meios" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Valor : </ion-label>
+      <ion-input formControlName="valor" type="text"></ion-input>
+  </ion-item>
+  </ion-list>
+<ion-button expand="full" (click)="cadastrar()">Registrar</ion-button>
+</form>
+</ion-content>

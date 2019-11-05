@@ -6,6 +6,12 @@
       <ion-title>Controle de Gastos</ion-title>
     </ion-toolbar>
 </ion-header>
+<ion-card-content>
+    <p>“Aqui realizamos um controle simplificado dos gastos com transportes nos deslocamentos para os eventos realizados..."
+  
+    </p>
+  </ion-card-content>
+  
 
 <ion-content>
 <form [formGroup]="formGroup"> <!-- vínculo com a variável formGroup  -->
@@ -28,6 +34,6 @@
       <ion-input formControlName="valor" type="text"></ion-input>
   </ion-item>
   </ion-list>
-<ion-button expand="full" (click)="cadastrar()">Registrar</ion-button>
+  <ion-button icon-left size="medium" expand="full" shape="round" color="dark" tappable (click)="cadastrar()">Registrar</ion-button>
 </form>
 </ion-content>

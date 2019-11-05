@@ -18,27 +18,26 @@
     <form [formGroup]="formGroup">
       <ion-list>
         <ion-item>
-          <ion-label floating>Nome</ion-label>
+          <ion-label floating>Nome:</ion-label>
           <ion-input formControlName="nome" value="{{perfil.nome}}" type="text">
             </ion-input>
         </ion-item>
         <ion-item>
-          <ion-label floating>Sobrenome</ion-label>
+          <ion-label floating>Sobrenome:</ion-label>
           <ion-input formControlName="sobrenome" value="{{perfil.sobrenome}}" type="text">
             </ion-input>
         </ion-item>
         <ion-item>
-            <ion-label floating>Telefone</ion-label>
+            <ion-label floating>Telefone:</ion-label>
             <ion-input formControlName="telefone"  value="{{perfil.telefone}}" type="text">
               </ion-input>
         </ion-item>
         <ion-item>
-            <ion-label floating>E-mail</ion-label>
+            <ion-label floating>Email:</ion-label>
             <ion-input formControlName="email"  value="{{perfil.email}}" type="text">
               </ion-input>
         </ion-item>
     </ion-list>
-    <ion-button expand="full" (click)="atualizar()">Atualizar</ion-button>
-
-    </form>
+    <ion-button icon-left size="medium" expand="full" shape="round" color="dark" tappable (click)="atualizar()">atualizar</ion-button>
+     </form>
 </ion-content>

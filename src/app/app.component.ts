@@ -34,23 +34,23 @@ export class AppComponent {
     {
       title: 'Orçamentos',
       url: '/orcamento-cadastro',
-      icon: 'contacts'
+      icon: 'paper'
     },
     {
       title: 'Lista de Orçamentos',
       url: '/orcamento-lista',
-      icon: 'contacts'
+      icon: 'List'
     },
     
     {
       title: 'Gastos',
       url: '/gasto-cadastro',
-      icon: 'contacts'
+      icon: 'calculator'
     },
     {
       title: 'Lista de Gastos',
       url: '/gasto-lista',
-      icon: 'contacts'
+      icon: 'List'
     },
 
     {

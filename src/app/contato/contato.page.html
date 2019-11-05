@@ -6,6 +6,11 @@
       <ion-title>Faça seu Contato</ion-title>
     </ion-toolbar>
 </ion-header>
+<ion-card-content>
+  <p>“ Por meio de seu contato, será transmitida a palavra do Senhor seja através de cenários bíblicos, com animações e personagens insfantis, murais , músicas e muito mais..."
+
+  </p>
+</ion-card-content>
 
 <ion-content>
 <form [formGroup]="formGroup"> <!-- vínculo com a variável formGroup  -->
@@ -32,6 +37,6 @@
     <ion-input formControlName="mensagem" type="text"></ion-input>
 </ion-item>
 </ion-list>
-<ion-button expand="full" (click)="cadastrar()">Enviar Formulário de contato</ion-button>
+<ion-button icon-left size="medium" expand="full" shape="round" color="dark" tappable (click)="cadastrar()">Enviar Formulário de contato</ion-button>
 </form>
 </ion-content>

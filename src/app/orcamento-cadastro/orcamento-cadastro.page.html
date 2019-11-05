@@ -6,32 +6,36 @@
       <ion-title>Faça seu Orçamento</ion-title>
     </ion-toolbar>
 </ion-header>
+<ion-card-content>
+  <p>“ Orçamento exclusivo para Festa de Aniversário infantil, com animações e personagens insfantis, murais, músicas e muito mais... 
+    </p>
+</ion-card-content>
 
 <ion-content>
 <form [formGroup]="formGroup"> <!-- vínculo com a variável formGroup  -->
   <ion-list>
     <ion-item>
-      <ion-label floating>Nome</ion-label>
+      <ion-label floating>Nome:</ion-label>
       <!-- formControlName -> Atributo do formgroup -->
       <ion-input formControlName="nome" type="text"></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label floating>Data</ion-label>
+        <ion-label floating>Data:</ion-label>
         <ion-input formControlName="data" type="text"></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label floating>E=mail</ion-label>
+        <ion-label floating>Email:</ion-label>
         <ion-input formControlName="email" type="text"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>Adicione informação</ion-label>
+      <ion-label floating>Mais informação:</ion-label>
       <ion-input formControlName="addinfo" type="text"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Urgência</ion-label>
+    <ion-label floating>Urgência:</ion-label>
     <ion-input formControlName="urgencia" type="text"></ion-input>
 </ion-item>
 </ion-list>
-<ion-button expand="full" (click)="cadastrar()">Enviar Solicitação</ion-button>
+<ion-button icon-left size="medium" expand="full" shape="round" color="dark" tappable (click)="cadastrar()">Enviar Solicitação</ion-button>
 </form>
 </ion-content>

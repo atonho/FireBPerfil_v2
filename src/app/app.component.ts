@@ -52,6 +52,11 @@ export class AppComponent {
       url: '/gasto-lista',
       icon: 'List'
     },
+    {
+      title: 'Location',
+      url: '/location',
+      icon: 'home'
+    },
 
     {
       title: 'Logoff',

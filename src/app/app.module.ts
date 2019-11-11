@@ -1,3 +1,4 @@
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -32,7 +33,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AuthGuardService,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Geolocation,
   ],
   bootstrap: [AppComponent]
 })

@@ -16,6 +16,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthGuardService } from './services/auth-guard.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -26,7 +28,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AngularFireModule.initializeApp(firebaseConfig), // Inicia Firebase com nossas conf
     AngularFirestoreModule, // Banco de dados 
     AngularFireAuthModule,  // Autenticação
-    AngularFireStorageModule // Armazenamento Arquivos
+    AngularFireStorageModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    // Armazenamento Arquivos
   ],
   providers: [
     StatusBar,

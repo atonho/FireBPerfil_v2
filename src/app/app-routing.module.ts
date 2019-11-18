@@ -26,7 +26,10 @@ const routes: Routes = [
   { path: 'gasto-cadastro', loadChildren: './gasto-cadastro/gasto-cadastro.module#GastoCadastroPageModule' },
   { path: 'gasto-detalhes', loadChildren: './gasto-detalhes/gasto-detalhes.module#GastoDetalhesPageModule' },
   { path: 'gasto-lista', loadChildren: './gasto-lista/gasto-lista.module#GastoListaPageModule' },
-  { path: 'location', loadChildren: './location/location.module#LocationPageModule' }
+  { path: 'location', loadChildren: './location/location.module#LocationPageModule' },
+  { path: 'games', loadChildren: './games/games.module#GamesPageModule' }
+
+
 
 ];
 

@@ -57,6 +57,11 @@ export class AppComponent {
       url: '/location',
       icon: 'home'
     },
+    {
+      title: 'Games',
+      url: '/games',
+      icon: 'person-add'
+    },
 
     {
       title: 'Logoff',
